@@ -7,8 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    void insertList(ListNode* list, int pos, int val)
-    {
+    void insertList(ListNode* list, int pos, int val) {
         if (list == NULL) {
             return;
         }
@@ -26,8 +25,7 @@ public:
         curnode->next = newnode;
     }
 
-    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2)
-    {
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         ListNode* tmp = new ListNode();
         ListNode* p = tmp;
 
@@ -35,8 +33,7 @@ public:
             if (list1->val > list2->val) {
                 p->next = list2;
                 list2 = list2->next;
-            }
-            else {
+            } else {
                 p->next = list1;
                 list1 = list1->next;
             }
@@ -54,8 +51,7 @@ public:
     }
 };
 
-int main()
-{
+int main() {
     Solution s;
 
     ListNode* list1 = new ListNode();
